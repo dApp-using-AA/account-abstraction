@@ -1,8 +1,8 @@
+import '@nomiclabs/hardhat-etherscan'
 import '@nomiclabs/hardhat-waffle'
 import '@typechain/hardhat'
-import { HardhatUserConfig, task } from 'hardhat/config'
 import 'hardhat-deploy'
-import '@nomiclabs/hardhat-etherscan'
+import { HardhatUserConfig, task } from 'hardhat/config'
 
 import 'solidity-coverage'
 
@@ -60,6 +60,7 @@ const config: HardhatUserConfig = {
     localgeth: { url: 'http://localgeth:8545' },
     goerli: getNetwork('goerli'),
     sepolia: getNetwork('sepolia'),
+    amoy: getNetwork('polygon-amoy'),
     proxy: getNetwork1('http://localhost:8545')
   },
   mocha: {
